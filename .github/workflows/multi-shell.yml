@@ -1,0 +1,20 @@
+name: Multi-Shell Hello World
+
+on:
+  push:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello with Bash
+        run: echo "Hello World"
+        shell: bash
+
+      - name: Hello with PowerShell
+        run: Write-Output "Hello World"
+        shell: pwsh
+
+      - name: Hello with Python
+        run: print("Hello World")
+        shell: python3 {0}
