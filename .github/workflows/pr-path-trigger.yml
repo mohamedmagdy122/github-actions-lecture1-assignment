@@ -8,11 +8,11 @@ on:
       - 'src/**'
 
 jobs:
-  pr-check:
+  check-src-changes:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Print trigger message
-        run: echo "PR triggered by changes in src/ directory"
+      - name: Notify src change detected
+        run: echo "Changes detected in src/ directory!"
