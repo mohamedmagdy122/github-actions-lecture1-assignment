@@ -1,1 +1,1 @@
-print("test from stg")
+print("hello from stg")
