@@ -19,3 +19,4 @@ jobs:
         env:
           VAR_EXAMPLE: step-level
         run: echo "Step 2 value: $VAR_EXAMPLE"
+
