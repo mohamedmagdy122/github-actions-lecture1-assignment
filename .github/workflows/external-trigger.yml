@@ -13,6 +13,5 @@ jobs:
         run: echo "Triggered by an external event!"
 
       - name: Print payload value
-        env:
-          MY_KEY: ${{ github.event.client_payload.my_key }}
-        run: echo "Payload my_key value: $MY_KEY"
+        run: |
+          echo "Payload my_key value: ${{ github.event.client_payload.my_key }}"
