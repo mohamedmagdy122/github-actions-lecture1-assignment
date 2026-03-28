@@ -1,0 +1,18 @@
+name: External Trigger
+
+on:
+  repository_dispatch:
+    types:
+      - custom-event
+
+jobs:
+  external:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print external trigger message
+        run: echo "Triggered by an external event!"
+
+      - name: Print payload value
+        env:
+          PAYLOAD_KEY: ${{ github.event.client_payload.my_key }}
+        run: echo "Payload my_key value is $PAYLOAD_KEY"

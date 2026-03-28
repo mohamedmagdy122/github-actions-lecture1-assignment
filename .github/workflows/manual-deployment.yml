@@ -29,3 +29,4 @@ jobs:
           echo "Environment: ${{ github.event.inputs.environment }}"
           echo "Deploy Type: ${{ github.event.inputs.deploy_type }}"
           echo "Dry Run: ${{ github.event.inputs.dry_run }}"
+
